@@ -54,7 +54,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#0A0A0B]/95 backdrop-blur-md shadow-lg shadow-black/10"
+          ? "bg-[#17171C]/95 backdrop-blur-md shadow-lg shadow-black/10"
           : "bg-transparent"
       }`}
     >
@@ -107,7 +107,7 @@ const Header = () => {
           mobileOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="bg-[#0A0A0B]/98 backdrop-blur-md border-t border-white/5 px-6 py-4 space-y-1">
+        <nav className="bg-[#17171C]/98 backdrop-blur-md border-t border-white/5 px-6 py-4 space-y-1">
           {navLinks.map((link) => (
             <a
               key={link.href}

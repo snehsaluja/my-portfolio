@@ -6,13 +6,13 @@ export const personalInfo = {
   lastName: "Saluja",
   title: "Software Engineer",
   tagline: "Building scalable backend systems that power millions of users",
-  subtitle: "11+ years crafting robust microservices, event-driven architectures & cloud-native solutions across travel, e-commerce, fintech & SaaS domains.",
+  subtitle: "12 years crafting robust microservices, event-driven architectures & cloud-native solutions across travel, e-commerce, fintech & SaaS domains.",
   email: "snehsaluja@gmail.com",
   location: "Whitefield, Bangalore, India",
   linkedin: "https://www.linkedin.com/in/snehsaluja",
   github: "https://github.com/snehsaluja",
   avatarPlaceholder: true,
-  about: "I'm a Software Engineer with over 11 years of experience building scalable backend systems across travel, e-commerce, fintech, and SaaS domains. I specialize in Java, Spring Boot, microservices, and cloud platforms including AWS, GCP, and Azure, with strong ownership of end-to-end delivery, platform reliability, and event-driven architectures using Kafka.",
+  about: "I'm a Software Engineer with 12 years of experience building scalable backend systems across travel, e-commerce, fintech, and SaaS domains. I specialize in Java, Spring Boot, microservices, and cloud platforms including AWS, GCP, and Azure, with strong ownership of end-to-end delivery, platform reliability, and event-driven architectures using Kafka.",
   aboutExtended: "Beyond code, I'm passionate about photography — capturing moments that tell stories. I love playing games that challenge strategy and creativity, and I find deep relaxation in sketching and painting, where I can express ideas visually. These hobbies keep my creative thinking sharp, which I bring into my engineering work every day.",
   resumeUrl: "#",
   openToRelocation: "Open to relocation within Europe",
@@ -244,7 +244,7 @@ export const education = {
   institution: "Meghnad Saha Institute of Technology, Kolkata",
   university: "West Bengal University of Technology",
   period: "Aug 2009 — June 2013",
-  cgpa: "8.63",
+  cgpa: "",
 };
 
 export const domains = ["Travel", "E-commerce/Retail", "Logistics & Supply Chain", "IoT", "Banking", "Fintech", "SaaS"];

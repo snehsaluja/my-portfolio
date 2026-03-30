@@ -45,7 +45,7 @@ const Achievements = () => {
           }`}
         >
           {[
-            { label: "Years Experience", value: "11+" },
+            { label: "Years Experience", value: "12" },
             { label: "Companies", value: "6" },
             { label: "Domains Covered", value: "7" },
             { label: "Cloud Platforms", value: "3" },

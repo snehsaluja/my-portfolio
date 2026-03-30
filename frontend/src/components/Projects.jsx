@@ -101,7 +101,7 @@ const Projects = () => {
     <section
       id="projects"
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-[#0A0A0B]"
+      className="relative py-24 lg:py-32 bg-[#17171C]"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}

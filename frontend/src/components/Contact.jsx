@@ -49,7 +49,7 @@ const Contact = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-[#0A0A0B]"
+      className="relative py-24 lg:py-32 bg-[#17171C]"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
@@ -186,11 +186,11 @@ const Contact = () => {
               <Button
                 type="submit"
                 disabled={sending}
-                className="w-full sm:w-auto h-12 px-8 bg-[#C19A6B] text-[#0A0A0B] font-semibold hover:bg-[#A88456] transition-colors duration-300 rounded-lg"
+                className="w-full sm:w-auto h-12 px-8 bg-[#C19A6B] text-[#17171C] font-semibold hover:bg-[#A88456] transition-colors duration-300 rounded-lg"
               >
                 {sending ? (
                   <span className="flex items-center gap-2">
-                    <span className="w-4 h-4 border-2 border-[#0A0A0B]/20 border-t-[#0A0A0B] rounded-full animate-spin" />
+                    <span className="w-4 h-4 border-2 border-[#17171C]/20 border-t-[#17171C] rounded-full animate-spin" />
                     Sending...
                   </span>
                 ) : (

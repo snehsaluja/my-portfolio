@@ -27,7 +27,7 @@ const Hero = () => {
     <section
       id="hero"
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center bg-[#0A0A0B] overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center bg-[#17171C] overflow-hidden"
     >
       {/* Subtle grid background */}
       <div className="absolute inset-0 opacity-[0.03]">
@@ -64,7 +64,7 @@ const Hero = () => {
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/[0.03] mb-8 animate-fadeIn">
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           <span className="text-[13px] text-white/50 font-medium tracking-wide">
-            Currently at Booking.com
+            Currently at Booking.com, India
           </span>
         </div>
 

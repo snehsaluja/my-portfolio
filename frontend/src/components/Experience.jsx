@@ -51,7 +51,7 @@ const ExperienceCard = ({ exp, index, isVisible }) => {
         </div>
 
         {/* Descriptions */}
-        <ul className={`space-y-2 overflow-hidden transition-all duration-300 ${expanded ? "max-h-[500px]" : "max-h-[60px]"}`}>
+        <ul className={`space-y-2 overflow-hidden transition-all duration-300 ${exp.descriptions.length <= 2 ? "max-h-none" : expanded ? "max-h-[500px]" : "max-h-[60px]"}`}>
           {exp.descriptions.map((desc, i) => (
             <li key={i} className="flex gap-2.5 text-sm text-[#52525B] leading-relaxed">
               <span className="text-[#C19A6B] mt-1.5 shrink-0">&#8226;</span>
@@ -113,7 +113,7 @@ const Experience = () => {
     <section
       id="experience"
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-[#0A0A0B]"
+      className="relative py-24 lg:py-32 bg-[#17171C]"
     >
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
@@ -129,7 +129,7 @@ const Experience = () => {
             Where I've worked
           </h2>
           <p className="text-sm text-white/30 mt-3 max-w-lg">
-            Over 11 years of building systems at scale — from banking to travel, e-commerce to IoT.
+            Over 12 years of building systems at scale — from banking to travel, e-commerce to IoT.
           </p>
         </div>
 

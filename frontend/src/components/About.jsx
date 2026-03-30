@@ -73,9 +73,6 @@ const About = () => {
               <p className="text-xs text-[#71717A] mt-1">{education.institution}</p>
               <div className="flex items-center justify-between mt-3">
                 <span className="text-xs text-[#A1A1AA]">{education.period}</span>
-                <Badge variant="outline" className="text-xs font-mono border-[#C19A6B]/30 text-[#C19A6B]">
-                  CGPA: {education.cgpa}
-                </Badge>
               </div>
             </div>
           </div>
