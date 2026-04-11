@@ -1,7 +1,47 @@
 import React, { useEffect, useRef, useState } from "react";
 import { personalInfo, hobbies, education, domains } from "../data/mock";
-import { GraduationCap, Globe, User } from "lucide-react";
-import { Badge } from "./ui/badge";
+import { GraduationCap, Globe, Aperture, Crosshair, PenTool, Sparkles } from "lucide-react";
+
+const quirkyDecorations = {
+  Photography: (
+    <>
+      <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full border-2 border-[#C19A6B]/20 opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110" />
+      <div className="absolute top-1 right-1 opacity-0 group-hover:opacity-40 transition-all duration-500 group-hover:rotate-45">
+        <Aperture size={14} className="text-[#C19A6B]" />
+      </div>
+      <div className="absolute -bottom-1 -left-1 w-5 h-5 rounded border border-dashed border-[#C19A6B]/20 opacity-0 group-hover:opacity-100 transition-all duration-500" />
+      <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-30 transition-all duration-700">
+        <Crosshair size={10} className="text-[#C19A6B]" />
+      </div>
+    </>
+  ),
+  Gaming: (
+    <>
+      <div className="absolute top-2 right-3 flex gap-1 opacity-0 group-hover:opacity-40 transition-all duration-500">
+        <span className="w-1.5 h-1.5 rounded-sm bg-[#C19A6B]" />
+        <span className="w-1.5 h-1.5 rounded-sm bg-[#C19A6B]/60" />
+        <span className="w-1.5 h-1.5 rounded-sm bg-[#C19A6B]/30" />
+      </div>
+      <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-lg border border-[#C19A6B]/20 opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:rotate-12" />
+      <div className="absolute bottom-2 right-8 opacity-0 group-hover:opacity-25 transition-all duration-700">
+        <span className="text-[10px] font-mono text-[#C19A6B] tracking-wider">GG</span>
+      </div>
+      <div className="absolute top-4 right-10 opacity-0 group-hover:opacity-20 transition-all duration-600">
+        <Sparkles size={10} className="text-[#C19A6B]" />
+      </div>
+    </>
+  ),
+  "Sketching & Painting": (
+    <>
+      <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-40 transition-all duration-500 group-hover:-rotate-12">
+        <PenTool size={12} className="text-[#C19A6B]" />
+      </div>
+      <div className="absolute -bottom-1.5 right-4 w-10 h-[2px] bg-gradient-to-r from-[#C19A6B]/30 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:w-14" />
+      <div className="absolute bottom-5 -right-1 w-3 h-3 rounded-full bg-[#C19A6B]/10 opacity-0 group-hover:opacity-100 transition-all duration-600 group-hover:scale-150" />
+      <div className="absolute top-8 right-6 w-2 h-2 rounded-full bg-[#C19A6B]/15 opacity-0 group-hover:opacity-100 transition-all duration-700" />
+    </>
+  ),
+};
 
 const About = () => {
   const sectionRef = useRef(null);
@@ -46,23 +86,21 @@ const About = () => {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
-            {/* Photo placeholder */}
+            {/* Photo */}
             <div className="relative group mb-8">
-              <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-[#E4E4E7] to-[#D4D4D8] border border-[#E4E4E7] overflow-hidden flex items-center justify-center">
-                <div className="text-center p-6">
-                  <div className="w-20 h-20 rounded-full bg-[#C19A6B]/10 border-2 border-dashed border-[#C19A6B]/30 flex items-center justify-center mx-auto mb-4">
-                    <User size={32} className="text-[#C19A6B]/50" />
-                  </div>
-                  <p className="text-sm font-medium text-[#71717A]">Your Photo Here</p>
-                  <p className="text-xs text-[#A1A1AA] mt-1">Replace this placeholder</p>
-                </div>
+              <div className="aspect-[4/5] rounded-2xl border border-[#E4E4E7] overflow-hidden">
+                <img
+                  src={personalInfo.avatarUrl}
+                  alt={personalInfo.name}
+                  className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-700"
+                />
               </div>
               {/* Decorative border accent */}
               <div className="absolute -bottom-3 -right-3 w-full h-full rounded-2xl border-2 border-[#C19A6B]/15 -z-10" />
             </div>
 
             {/* Education card */}
-            <div className="rounded-xl border border-[#E4E4E7] bg-white p-5">
+            <div className="rounded-xl border border-[#E4E4E7] bg-white p-5 hover:border-[#C19A6B]/30 hover:shadow-md hover:shadow-[#C19A6B]/5 hover:-translate-y-1 transition-all duration-300">
               <div className="flex items-center gap-3 mb-3">
                 <div className="p-2 rounded-lg bg-[#C19A6B]/10">
                   <GraduationCap size={18} className="text-[#C19A6B]" />
@@ -121,11 +159,13 @@ const About = () => {
                   return (
                     <div
                       key={hobby.name}
-                      className="group p-5 rounded-xl border border-[#E4E4E7] bg-white hover:border-[#C19A6B]/30 hover:shadow-md hover:shadow-[#C19A6B]/5 transition-all duration-300"
+                      className="group relative p-5 rounded-xl border border-[#E4E4E7] bg-white hover:border-[#C19A6B]/30 hover:shadow-md hover:shadow-[#C19A6B]/5 hover:-translate-y-1 transition-all duration-300 overflow-hidden"
                     >
+                      {/* Quirky decorations */}
+                      {quirkyDecorations[hobby.name]}
                       <Icon
                         size={22}
-                        className="text-[#C19A6B] mb-3 group-hover:scale-110 transition-transform duration-300"
+                        className="text-[#C19A6B] mb-3 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300"
                       />
                       <h4 className="text-sm font-semibold text-[#18181B] mb-1">
                         {hobby.name}

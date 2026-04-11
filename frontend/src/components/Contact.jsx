@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { personalInfo } from "../data/mock";
-import { Mail, MapPin, Send, Linkedin, Github, ArrowUpRight } from "lucide-react";
+import { Mail, MapPin, Send, Linkedin, Github, Instagram, ArrowUpRight } from "lucide-react";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
@@ -127,6 +127,16 @@ const Contact = () => {
                 >
                   <Github size={18} className="text-white/40 group-hover/link:text-[#C19A6B] transition-colors" />
                   <span className="text-sm text-white/50 group-hover/link:text-white/80 transition-colors flex-1">GitHub</span>
+                  <ArrowUpRight size={14} className="text-white/20 group-hover/link:text-[#C19A6B] transition-colors" />
+                </a>
+                <a
+                  href={personalInfo.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-3 rounded-lg border border-white/5 bg-white/[0.02] hover:border-[#C19A6B]/20 hover:bg-[#C19A6B]/5 transition-all duration-300 group/link"
+                >
+                  <Instagram size={18} className="text-white/40 group-hover/link:text-[#C19A6B] transition-colors" />
+                  <span className="text-sm text-white/50 group-hover/link:text-white/80 transition-colors flex-1">Instagram</span>
                   <ArrowUpRight size={14} className="text-white/20 group-hover/link:text-[#C19A6B] transition-colors" />
                 </a>
               </div>

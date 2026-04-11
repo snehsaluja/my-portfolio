@@ -40,19 +40,18 @@ const Achievements = () => {
 
         {/* Stats Row */}
         <div
-          className={`grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12 transition-all duration-700 delay-100 ${
+          className={`grid grid-cols-3 gap-4 mb-12 transition-all duration-700 delay-100 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
           {[
             { label: "Years Experience", value: "12" },
-            { label: "Companies", value: "6" },
             { label: "Domains Covered", value: "7" },
             { label: "Cloud Platforms", value: "3" },
           ].map((stat) => (
             <div
               key={stat.label}
-              className="p-5 rounded-xl border border-[#E4E4E7] bg-white text-center"
+              className="p-5 rounded-xl border border-[#E4E4E7] bg-white text-center hover:border-[#C19A6B]/25 hover:shadow-md hover:shadow-[#C19A6B]/5 hover:-translate-y-1 transition-all duration-300"
             >
               <p className="text-2xl lg:text-3xl font-bold text-[#C19A6B] font-mono">
                 {stat.value}
@@ -69,7 +68,7 @@ const Achievements = () => {
           {achievements.map((achievement, index) => (
             <div
               key={achievement.id}
-              className={`group p-6 rounded-xl border border-[#E4E4E7] bg-white hover:border-[#C19A6B]/20 hover:shadow-lg hover:shadow-[#C19A6B]/[0.03] transition-all duration-500 ${
+              className={`group p-6 rounded-xl border border-[#E4E4E7] bg-white hover:border-[#C19A6B]/20 hover:shadow-lg hover:shadow-[#C19A6B]/[0.03] hover:-translate-y-1 transition-all duration-500 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-6"

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { ArrowDown, MapPin, Linkedin, Github } from "lucide-react";
+import { ArrowDown, MapPin, Linkedin, Github, Instagram } from "lucide-react";
 import { personalInfo } from "../data/mock";
 
 const Hero = () => {
@@ -108,6 +108,15 @@ const Hero = () => {
               aria-label="GitHub"
             >
               <Github size={16} />
+            </a>
+            <a
+              href={personalInfo.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-full border border-white/10 bg-white/[0.03] text-white/40 hover:text-[#C19A6B] hover:border-[#C19A6B]/30 hover:bg-[#C19A6B]/5 transition-all duration-300"
+              aria-label="Instagram"
+            >
+              <Instagram size={16} />
             </a>
           </div>
         </div>

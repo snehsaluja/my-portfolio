@@ -1,6 +1,6 @@
 import React from "react";
 import { personalInfo } from "../data/mock";
-import { Linkedin, Github, Mail, Heart } from "lucide-react";
+import { Linkedin, Github, Instagram, Mail, Heart } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -38,6 +38,15 @@ const Footer = () => {
               aria-label="GitHub"
             >
               <Github size={16} />
+            </a>
+            <a
+              href={personalInfo.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2.5 rounded-full border border-white/5 bg-white/[0.02] text-white/30 hover:text-[#C19A6B] hover:border-[#C19A6B]/20 transition-all duration-300"
+              aria-label="Instagram"
+            >
+              <Instagram size={16} />
             </a>
             <a
               href={`mailto:${personalInfo.email}`}

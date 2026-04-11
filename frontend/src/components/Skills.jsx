@@ -67,7 +67,7 @@ const Skills = () => {
             return (
               <div
                 key={category.title}
-                className={`group p-6 rounded-xl border border-[#E4E4E7] bg-white hover:border-[#C19A6B]/20 hover:shadow-lg hover:shadow-[#C19A6B]/[0.03] transition-all duration-500 ${
+                className={`group p-6 rounded-xl border border-[#E4E4E7] bg-white hover:border-[#C19A6B]/20 hover:shadow-lg hover:shadow-[#C19A6B]/[0.03] hover:-translate-y-1 transition-all duration-500 ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-6"

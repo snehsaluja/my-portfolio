@@ -31,7 +31,7 @@ const ExperienceCard = ({ exp, index, isVisible }) => {
       </div>
 
       {/* Card */}
-      <div className="group rounded-xl border border-[#E4E4E7] bg-white hover:border-[#C19A6B]/20 hover:shadow-lg hover:shadow-[#C19A6B]/[0.03] transition-all duration-300 p-5 lg:p-6">
+      <div className="group rounded-xl border border-[#E4E4E7] bg-white hover:border-[#C19A6B]/20 hover:shadow-lg hover:shadow-[#C19A6B]/[0.03] hover:-translate-y-1 transition-all duration-300 p-5 lg:p-6">
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
           <div>
             <h3 className="text-base font-bold text-[#18181B] group-hover:text-[#C19A6B] transition-colors duration-300">
