@@ -68,12 +68,12 @@ const Achievements = () => {
           {achievements.map((achievement, index) => (
             <div
               key={achievement.id}
-              className={`group p-6 rounded-xl border border-[#E4E4E7] bg-white hover:border-[#C19A6B]/20 hover:shadow-lg hover:shadow-[#C19A6B]/[0.03] hover:-translate-y-1 transition-all duration-500 ${
+              className={`group p-6 rounded-xl border border-[#E4E4E7] bg-white hover:border-[#C19A6B]/20 hover:shadow-lg hover:shadow-[#C19A6B]/[0.03] hover:-translate-y-1 transition-all duration-300 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-6"
               }`}
-              style={{ transitionDelay: `${index * 100 + 300}ms` }}
+              style={{ transitionDelay: isVisible ? "0ms" : `${index * 100 + 300}ms` }}
             >
               <div className="flex items-start gap-4">
                 <div className="p-2.5 rounded-lg bg-[#C19A6B]/10 group-hover:bg-[#C19A6B]/15 transition-colors duration-300 shrink-0">

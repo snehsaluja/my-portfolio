@@ -5,6 +5,10 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import { useToast } from "../hooks/use-toast";
+import axios from "axios";
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const Contact = () => {
   const sectionRef = useRef(null);
@@ -24,21 +28,26 @@ const Contact = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setSending(true);
-    // Mock submission - saves to localStorage
-    setTimeout(() => {
-      const messages = JSON.parse(localStorage.getItem("portfolio_messages") || "[]");
-      messages.push({ ...formData, timestamp: new Date().toISOString() });
-      localStorage.setItem("portfolio_messages", JSON.stringify(messages));
+    try {
+      await axios.post(`${API}/contact`, formData);
       setFormData({ name: "", email: "", message: "" });
-      setSending(false);
       toast({
         title: "Message sent!",
         description: "Thanks for reaching out. I'll get back to you soon.",
       });
-    }, 1000);
+    } catch (err) {
+      const detail = err.response?.data?.detail;
+      toast({
+        title: "Something went wrong",
+        description: typeof detail === "string" ? detail : "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setSending(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -210,9 +219,6 @@ const Contact = () => {
                   </span>
                 )}
               </Button>
-              <p className="text-[11px] text-white/15 mt-2">
-                * Currently using browser storage. Messages are saved locally.
-              </p>
             </form>
           </div>
         </div>
