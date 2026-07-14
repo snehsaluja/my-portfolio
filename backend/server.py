@@ -5,8 +5,8 @@ from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 from pathlib import Path
-from pydantic import BaseModel, Field, ConfigDict, EmailStr
-from typing import List, Optional
+from pydantic import BaseModel, Field, ConfigDict
+from typing import List
 import uuid
 from datetime import datetime, timezone
 
@@ -65,38 +65,6 @@ async def get_status_checks():
             check['timestamp'] = datetime.fromisoformat(check['timestamp'])
     
     return status_checks
-
-# Contact Message Models
-class ContactMessageCreate(BaseModel):
-    name: str = Field(..., min_length=1, max_length=200)
-    email: EmailStr
-    message: str = Field(..., min_length=1, max_length=5000)
-
-class ContactMessage(BaseModel):
-    model_config = ConfigDict(extra="ignore")
-    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    name: str
-    email: str
-    message: str
-    timestamp: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
-    status: str = "new"
-
-@api_router.post("/contact", response_model=ContactMessage, status_code=201)
-async def create_contact_message(input: ContactMessageCreate):
-    msg = ContactMessage(**input.model_dump())
-    doc = msg.model_dump()
-    doc['timestamp'] = doc['timestamp'].isoformat()
-    await db.contact_messages.insert_one(doc)
-    logger.info(f"New contact message from {msg.name} ({msg.email})")
-    return msg
-
-@api_router.get("/contact", response_model=List[ContactMessage])
-async def get_contact_messages():
-    messages = await db.contact_messages.find({}, {"_id": 0}).to_list(1000)
-    for m in messages:
-        if isinstance(m.get('timestamp'), str):
-            m['timestamp'] = datetime.fromisoformat(m['timestamp'])
-    return messages
 
 # Include the router in the main app
 app.include_router(api_router)
