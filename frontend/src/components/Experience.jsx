@@ -113,7 +113,7 @@ const Experience = () => {
     <section
       id="experience"
       ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-[#17171C]"
+      className="relative py-24 lg:py-32 bg-white"
     >
       <div className="max-w-4xl mx-auto px-6 lg:px-8">
         {/* Section Header */}
@@ -125,10 +125,10 @@ const Experience = () => {
           <p className="text-[13px] font-mono text-[#C19A6B] tracking-widest uppercase mb-3">
             // Experience
           </p>
-          <h2 className="text-3xl lg:text-4xl font-bold text-white tracking-tight">
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#18181B] tracking-tight">
             Where I've worked
           </h2>
-          <p className="text-sm text-white/30 mt-3 max-w-lg">
+          <p className="text-sm text-[#71717A] mt-3 max-w-lg">
             Over 12 years of building systems at scale — from banking to travel, e-commerce to IoT.
           </p>
         </div>

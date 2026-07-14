@@ -54,7 +54,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#17171C]/95 backdrop-blur-md shadow-lg shadow-black/10"
+          ? "bg-white/95 backdrop-blur-md shadow-sm"
           : "bg-transparent"
       }`}
     >
@@ -64,11 +64,11 @@ const Header = () => {
           <a
             href="#hero"
             onClick={(e) => handleNavClick(e, "#hero")}
-            className="font-mono text-sm tracking-wider text-white/90 hover:text-[#C19A6B] transition-colors duration-300"
+            className="font-mono text-sm tracking-wider text-[#18181B]/80 hover:text-[#C19A6B] transition-colors duration-300"
           >
             <span className="text-[#C19A6B] font-semibold">{"<"}</span>
             <span className="font-semibold">{personalInfo.firstName}</span>
-            <span className="text-white/50">{personalInfo.lastName}</span>
+            <span className="text-[#18181B]/40">{personalInfo.lastName}</span>
             <span className="text-[#C19A6B] font-semibold">{" />"}</span>
           </a>
 
@@ -82,7 +82,7 @@ const Header = () => {
                 className={`px-4 py-2 text-[13px] font-medium tracking-wide rounded-full transition-all duration-300 ${
                   activeSection === link.href.slice(1)
                     ? "text-[#C19A6B] bg-[#C19A6B]/10"
-                    : "text-white/60 hover:text-white/90 hover:bg-white/5"
+                    : "text-[#52525B] hover:text-[#18181B] hover:bg-[#18181B]/5"
                 }`}
               >
                 {link.label}
@@ -93,7 +93,7 @@ const Header = () => {
           {/* Mobile Toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-white/80 hover:text-white p-2 transition-colors"
+            className="lg:hidden text-[#52525B] hover:text-[#18181B] p-2 transition-colors"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -107,7 +107,7 @@ const Header = () => {
           mobileOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="bg-[#17171C]/98 backdrop-blur-md border-t border-white/5 px-6 py-4 space-y-1">
+        <nav className="bg-white/98 backdrop-blur-md border-t border-[#E4E4E7] px-6 py-4 space-y-1">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -116,7 +116,7 @@ const Header = () => {
               className={`block px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 ${
                 activeSection === link.href.slice(1)
                   ? "text-[#C19A6B] bg-[#C19A6B]/10"
-                  : "text-white/60 hover:text-white/90 hover:bg-white/5"
+                  : "text-[#52525B] hover:text-[#18181B] hover:bg-[#18181B]/5"
               }`}
             >
               {link.label}
