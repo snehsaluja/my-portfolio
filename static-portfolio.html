@@ -42,13 +42,13 @@
 
     /* Subtle background pattern */
     .bg-dots {
-      background-image: radial-gradient(circle, rgba(255,190,11,0.08) 1px, transparent 1px);
-      background-size: 32px 32px;
+      background-image: radial-gradient(circle, rgba(255,190,11,0.18) 1.2px, transparent 1.2px);
+      background-size: 28px 28px;
     }
     .bg-grid {
       background-image:
-        linear-gradient(rgba(255,190,11,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,190,11,0.04) 1px, transparent 1px);
+        linear-gradient(rgba(255,190,11,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,190,11,0.07) 1px, transparent 1px);
       background-size: 60px 60px;
     }
     .bg-grain {
@@ -58,7 +58,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      opacity: 0.018;
+      opacity: 0.045;
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
       pointer-events: none;
       z-index: 0;
@@ -86,7 +86,7 @@
     .float-shape {
       position: absolute;
       border-radius: 50%;
-      opacity: 0.04;
+      opacity: 0.1;
       pointer-events: none;
     }
   </style>
@@ -147,9 +147,9 @@
           <i data-lucide="map-pin" class="w-[14px] h-[14px] text-amber"></i>Bangalore, India
         </span>
         <div class="flex items-center gap-3">
-          <a href="https://www.linkedin.com/in/snehsaluja" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full border border-[#E4E4E7] bg-white text-[#71717A] hover:text-amber hover:border-amber/30 hover:shadow-md hover:shadow-amber/10 transition-all duration-300" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-4 h-4"></i></a>
-          <a href="https://github.com/snehsaluja" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full border border-[#E4E4E7] bg-white text-[#71717A] hover:text-amber hover:border-amber/30 hover:shadow-md hover:shadow-amber/10 transition-all duration-300" aria-label="GitHub"><i data-lucide="github" class="w-4 h-4"></i></a>
-          <a href="https://www.instagram.com/sneh.saluja" target="_blank" rel="noopener noreferrer" class="p-2.5 rounded-full border border-[#E4E4E7] bg-white text-[#71717A] hover:text-amber hover:border-amber/30 hover:shadow-md hover:shadow-amber/10 transition-all duration-300" aria-label="Instagram"><i data-lucide="instagram" class="w-4 h-4"></i></a>
+          <a href="https://www.linkedin.com/in/snehsaluja" target="_blank" rel="noopener noreferrer" class="p-3 rounded-full border-2 border-[#B0B0B5] bg-white shadow-md text-[#18181B] hover:text-amber hover:border-amber hover:shadow-lg hover:shadow-amber/15 transition-all duration-300" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+          <a href="https://github.com/snehsaluja" target="_blank" rel="noopener noreferrer" class="p-3 rounded-full border-2 border-[#B0B0B5] bg-white shadow-md text-[#18181B] hover:text-amber hover:border-amber hover:shadow-lg hover:shadow-amber/15 transition-all duration-300" aria-label="GitHub"><i data-lucide="github" class="w-5 h-5"></i></a>
+          <a href="https://www.instagram.com/sneh.saluja" target="_blank" rel="noopener noreferrer" class="p-3 rounded-full border-2 border-[#B0B0B5] bg-white shadow-md text-[#18181B] hover:text-amber hover:border-amber hover:shadow-lg hover:shadow-amber/15 transition-all duration-300" aria-label="Instagram"><i data-lucide="instagram" class="w-5 h-5"></i></a>
         </div>
       </div>
       <a href="#about" class="inline-flex flex-col items-center gap-2 text-[#A1A1AA] hover:text-amber transition-colors duration-300 animate-fadeInUp delay-800">
@@ -161,7 +161,7 @@
 
   <!-- ===== ABOUT ===== -->
   <section id="about" class="relative py-24 lg:py-32 bg-white bg-grain">
-    <div class="float-shape w-[250px] h-[250px] bg-amber top-[10%] right-[5%] blur-[100px] opacity-[0.03]"></div>
+    <div class="float-shape w-[250px] h-[250px] bg-amber top-[10%] right-[5%] blur-[100px]"></div>
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="reveal mb-16">
         <p class="text-[13px] font-mono text-amber tracking-widest uppercase mb-3">// About Me</p>
@@ -368,7 +368,7 @@
 
   <!-- ===== PROJECTS ===== -->
   <section id="projects" class="relative py-24 lg:py-32 bg-white bg-grain">
-    <div class="float-shape w-[300px] h-[300px] bg-amber bottom-[10%] left-[5%] blur-[100px] opacity-[0.03]"></div>
+    <div class="float-shape w-[300px] h-[300px] bg-amber bottom-[10%] left-[5%] blur-[100px]"></div>
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="reveal mb-16">
         <p class="text-[13px] font-mono text-amber tracking-widest uppercase mb-3">// Projects</p>
@@ -491,11 +491,11 @@
         <p class="text-base text-[#71717A] mt-4 max-w-md mx-auto leading-relaxed">Have an interesting project or opportunity? I'd love to hear from you.</p>
       </div>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 reveal">
-        <a href="mailto:snehsaluja@gmail.com" class="group flex items-center gap-3 px-6 py-4 rounded-xl border border-[#E4E4E7] bg-white hover-lift w-full sm:w-auto">
+        <a href="mailto:snehsaluja@gmail.com" class="group flex items-center gap-3 px-6 py-4 rounded-xl border border-[#C4C4C8] bg-white shadow-sm hover:border-amber/40 hover:shadow-md hover:shadow-amber/10 hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto">
           <div class="p-2 rounded-lg bg-amber/10"><i data-lucide="mail" class="w-[18px] h-[18px] text-amber"></i></div>
           <div class="text-left"><p class="text-[11px] text-[#A1A1AA] font-medium uppercase tracking-wider">Email</p><p class="text-sm font-medium text-[#18181B] group-hover:text-amber transition-colors">snehsaluja@gmail.com</p></div>
         </a>
-        <div class="flex items-center gap-3 px-6 py-4 rounded-xl border border-[#E4E4E7] bg-white w-full sm:w-auto">
+        <div class="flex items-center gap-3 px-6 py-4 rounded-xl border border-[#C4C4C8] bg-white shadow-sm w-full sm:w-auto">
           <div class="p-2 rounded-lg bg-amber/10"><i data-lucide="map-pin" class="w-[18px] h-[18px] text-amber"></i></div>
           <div class="text-left"><p class="text-[11px] text-[#A1A1AA] font-medium uppercase tracking-wider">Location</p><p class="text-sm font-medium text-[#18181B]">Bangalore, India</p></div>
         </div>
@@ -503,9 +503,9 @@
       <div class="reveal">
         <p class="text-xs text-[#A1A1AA] font-medium uppercase tracking-widest mb-5">Find me on</p>
         <div class="flex items-center justify-center gap-4">
-          <a href="https://www.linkedin.com/in/snehsaluja" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 px-5 py-3 rounded-xl border border-[#E4E4E7] bg-white hover-lift"><i data-lucide="linkedin" class="w-[18px] h-[18px] text-[#71717A] group-hover:text-amber transition-colors"></i><span class="text-sm font-medium text-[#52525B] group-hover:text-[#18181B] transition-colors hidden sm:inline">LinkedIn</span><i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#A1A1AA] group-hover:text-amber transition-colors"></i></a>
-          <a href="https://github.com/snehsaluja" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 px-5 py-3 rounded-xl border border-[#E4E4E7] bg-white hover-lift"><i data-lucide="github" class="w-[18px] h-[18px] text-[#71717A] group-hover:text-amber transition-colors"></i><span class="text-sm font-medium text-[#52525B] group-hover:text-[#18181B] transition-colors hidden sm:inline">GitHub</span><i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#A1A1AA] group-hover:text-amber transition-colors"></i></a>
-          <a href="https://www.instagram.com/sneh.saluja" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 px-5 py-3 rounded-xl border border-[#E4E4E7] bg-white hover-lift"><i data-lucide="instagram" class="w-[18px] h-[18px] text-[#71717A] group-hover:text-amber transition-colors"></i><span class="text-sm font-medium text-[#52525B] group-hover:text-[#18181B] transition-colors hidden sm:inline">Instagram</span><i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#A1A1AA] group-hover:text-amber transition-colors"></i></a>
+          <a href="https://www.linkedin.com/in/snehsaluja" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 px-5 py-3 rounded-xl border-2 border-[#B0B0B5] bg-white shadow-md hover:border-amber hover:shadow-lg hover:shadow-amber/15 hover:-translate-y-1 transition-all duration-300"><i data-lucide="linkedin" class="w-[18px] h-[18px] text-[#18181B] group-hover:text-amber transition-colors"></i><span class="text-sm font-semibold text-[#18181B] group-hover:text-amber transition-colors hidden sm:inline">LinkedIn</span><i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#71717A] group-hover:text-amber transition-colors"></i></a>
+          <a href="https://github.com/snehsaluja" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 px-5 py-3 rounded-xl border-2 border-[#B0B0B5] bg-white shadow-md hover:border-amber hover:shadow-lg hover:shadow-amber/15 hover:-translate-y-1 transition-all duration-300"><i data-lucide="github" class="w-[18px] h-[18px] text-[#18181B] group-hover:text-amber transition-colors"></i><span class="text-sm font-semibold text-[#18181B] group-hover:text-amber transition-colors hidden sm:inline">GitHub</span><i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#71717A] group-hover:text-amber transition-colors"></i></a>
+          <a href="https://www.instagram.com/sneh.saluja" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 px-5 py-3 rounded-xl border-2 border-[#B0B0B5] bg-white shadow-md hover:border-amber hover:shadow-lg hover:shadow-amber/15 hover:-translate-y-1 transition-all duration-300"><i data-lucide="instagram" class="w-[18px] h-[18px] text-[#18181B] group-hover:text-amber transition-colors"></i><span class="text-sm font-semibold text-[#18181B] group-hover:text-amber transition-colors hidden sm:inline">Instagram</span><i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-[#71717A] group-hover:text-amber transition-colors"></i></a>
         </div>
       </div>
     </div>
