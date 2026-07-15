@@ -133,6 +133,11 @@ h1, h2, h3, h4, h5, h6 {
 .rotate-12  { transform: rotate(12deg); }
 .rotate-neg { transform: rotate(-18deg); }
 
+/* Clip decorative elements within their parent sections */
+section, footer {
+  overflow: hidden;
+}
+
 /* Floating shapes */
 .float-shape {
   position: absolute;
